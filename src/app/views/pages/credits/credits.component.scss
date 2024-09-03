@@ -19,36 +19,7 @@ section {
   flex-direction: column;
 }
 
-.project {
-  animation-fill-mode: forwards;
-  animation-timing-function: steps(24);
-mask-image: url("/assets/credits-page/wipe-mask.png");
-mask-position: 0% 0%;
-image-rendering: pixelated;
 
-}
-
-
-.zoocadia {
-  animation: trigger linear forwards;
-  animation-timeline: view();
-  animation-range: entry 10% contain 10%;
-}
-
-
-
-@container style(--animate: true) {
-  section:nth-of-type(1)
-  {
-      animation: wipe 2s forwards;
-  }
-}
-
-@keyframes trigger {
-  to {
-    --animate: true;
-  }
-}
 
 
 *
@@ -71,6 +42,7 @@ image-rendering: pixelated;
   img {
     height:60vh;
     overflow:hidden;
+    object-fit: cover;
   }
 }
 
@@ -137,9 +109,46 @@ h3 {
   margin: 6px 0 0 0;
 }
 
-@keyframes wipe {
-  to {
-    -webkit-mask-position: 100% 0%;
-    mask-position: 100% 0%;
+
+
+@supports ( animation-timeline: view() )
+{
+  @keyframes wipe {
+    to {
+      -webkit-mask-position: 100% 0%;
+      mask-position: 100% 0%;
+    }
+  }
+
+  .project {
+    animation-fill-mode: both;
+    animation-timing-function: steps(24);
+  mask-image: url("/assets/credits-page/wipe-mask.png");
+  mask-position: 0% 0%;
+  image-rendering: pixelated;
+  transition-delay: 350ms;
+  transition:300ms;
+  }
+
+
+  .zoocadia {
+    animation: trigger linear forwards;
+    animation-timeline: view();
+    animation-range: entry 10% contain 10%;
+  }
+
+
+
+  @container style(--animate: true) {
+    section:nth-of-type(1)
+    {
+        animation: wipe 2s forwards;
+    }
+  }
+
+  @keyframes trigger {
+    to {
+      --animate: true;
+    }
   }
 }
