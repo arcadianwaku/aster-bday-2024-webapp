@@ -33,19 +33,22 @@ section {
 }
 
 .carousel {
-  width:50vw;
+  width:60vw;
   background-color:black;
   position:relative;
   box-shadow:
     0 0 15px 1px #f899ff29,
     0 0 28px 10px #c870ff40;
   img {
-    height:60vh;
-    overflow:hidden;
+    height:100%;
     object-fit: cover;
   }
 }
 
+.carousel-item {
+  overflow:hidden;
+  height:70vh;
+}
 .carousel-control-prev, .carousel-control-next {
   width:7%;
 }
@@ -73,10 +76,10 @@ h2 {
   justify-content: center;
   line-height: 70px;
   font-size: 2rem;
+  margin: 0 !important;
 }
 
 .carousel-indicators {
-position:relative;
 bottom:-4rem;
 z-index:100;
 button {
