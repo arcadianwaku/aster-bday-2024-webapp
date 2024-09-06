@@ -1,4 +1,4 @@
-import { Component, Inject } from '@angular/core';
+import { AfterViewInit, Component, Inject, OnDestroy } from '@angular/core';
 import { MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { ComicPageData } from 'src/app/data/ComicImages';
 
@@ -9,7 +9,7 @@ const MAX_IMAGES_SHOWN = 1;
   templateUrl: './comic-project-showcase-popup.component.html',
   styleUrl: './comic-project-showcase-popup.component.scss'
 })
-export class ComicProjectShowcasePopupComponent {
+export class ComicProjectShowcasePopupComponent implements AfterViewInit, OnDestroy {
 
   readonly PLACEHOLDER_IMG_VALUE = 'placeholder';
 
@@ -50,6 +50,21 @@ export class ComicProjectShowcasePopupComponent {
       }
     }
     this.imagesToShow = newImagesToShow;
+  }
+
+  ngAfterViewInit() {
+    const script = document.createElement('script');
+    script.type = 'text/javascript';
+    script.src = 'https://platform.twitter.com/widgets.js';
+    script.id = 'twitter-embed-script';
+    document.getElementsByTagName('head')[0].appendChild(script);
+  }
+
+  ngOnDestroy() {
+    const script = document.getElementById('twitter-embed-script');
+    if (script) {
+      document.getElementsByTagName('head')[0].removeChild(script);
+    }
   }
 
   getDisplayOf(pageData: ComicPageData): string {

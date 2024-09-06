@@ -11,12 +11,15 @@
             <mat-icon *ngIf="!disableLeftBtn">chevron_left</mat-icon>
         </button>
 
-        <div *ngFor="let page of imagesToShow; let i = index" class="comic-page-container">
+
+        <blockquote class="twitter-tweet"><p lang="en" dir="ltr">They arrived in time for twitch con !<br>✌️😁<a href="https://twitter.com/hashtag/Beaches?src=hash&amp;ref_src=twsrc%5Etfw">#Beaches</a> love <a href="https://twitter.com/hashtag/MakoSameshima?src=hash&amp;ref_src=twsrc%5Etfw">#MakoSameshima</a> <a href="https://t.co/RoT9Zs5sQH">pic.twitter.com/RoT9Zs5sQH</a></p>&mdash; Clovenski (&#64;Clovenski) <a href="https://twitter.com/Clovenski/status/1831813484348371203?ref_src=twsrc%5Etfw">September 5, 2024</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+        <!-- <div *ngFor="let page of imagesToShow; let i = index" class="comic-page-container">
             <img *ngIf="page.srcPath != PLACEHOLDER_IMG_VALUE" [src]="page.srcPath" [ngClass]="['comic-page', isSmallScreen ? 'sm-screen' : '' ]" />
             <div *ngIf="page.srcPath == PLACEHOLDER_IMG_VALUE" [ngClass]="['placeholder-comic-page', isSmallScreen ? 'sm-screen' : '']"></div>
 
             <p>{{ getDisplayOf(page) }}</p>
-        </div>
+        </div> -->
 
         <button mat-icon-button class="right-btn"
             [disabled]="disableRightBtn" (click)="navigateRight()"
