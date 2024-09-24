@@ -1,4 +1,4 @@
-<div class="container" *ngIf="isPageLocked">
+<div class="content" *ngIf="isPageLocked">
     <img src="/assets/projects-pwd-page/bg.png" class="prompt-bg"/>
     <div class="prompt-container">
         <span class="pwd-header">ENTER PASSWORD</span>
@@ -16,7 +16,7 @@
 <div id="stars3"></div>
 <div id="stars4"></div>
 
-<div class="container" *ngIf="!isPageLocked">
+<div class="content" *ngIf="!isPageLocked">
     <!-- TODO: move these to clickable stars that lay on top of constellation background -->
     <button mat-button (click)="openProject('Jess')">Jess project</button>
     <button mat-button (click)="openProject('Syndrie')">Syndrie project</button>
