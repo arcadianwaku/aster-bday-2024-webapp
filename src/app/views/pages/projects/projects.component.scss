@@ -57,7 +57,7 @@
   }
 
 .content {
-    height: 100%;
+    height: calc(100vh - 75px);
     width: 100%;
 
     background-image: linear-gradient(to bottom, #000000,#6a5bcd,#9470db);
@@ -70,11 +70,12 @@
 
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    // justify-content: center;
     align-items: center;
+    overflow-y: hidden;
 
     .prompt-bg {
-        z-index: -1;
+        z-index: 0;
     }
 
     .prompt-container {
@@ -110,4 +111,28 @@
             }
         }
     }
+
+    .constellation-bg {
+      height: 630px; // !! specific height so the stars can be placed over the bg regardless of screen dimensions
+      position: absolute;
+      top: 110px;
+      z-index: 1;
+    }
+
+    .title {
+      font-size: xx-large;
+      position: absolute;
+      top: 140px;
+    }
+
+    .project-star {
+      position: absolute;
+      transform: scale(0.1);
+      z-index: 10;
+    }
+    .project-star:hover {
+      cursor: pointer;
+      transform: scale(0.13);
+    }
+
 }
