@@ -65,18 +65,30 @@
     100% {opacity: 0;}
   }
 
-.container {
+.content {
+    height: calc(100vh - 75px);
+    width: 100%;
+
+    background-image: linear-gradient(to bottom, #000000,#6a5bcd,#9470db);
+    background-size: cover;
+    -moz-background-size: 100% 100%;
+    -webkit-background-size: 100% 100%;
+    background-size: 100% 100%;
+
+    padding: 50px 10%;
+
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    // justify-content: center;
     align-items: center;
+    overflow-y: hidden;
 
     button{
       float: inline-end;
     }
 
     .prompt-bg {
-        z-index: -1;
+        z-index: 0;
     }
 
     .prompt-container {
@@ -112,4 +124,28 @@
             }
         }
     }
+
+    .constellation-bg {
+      height: 630px; // !! specific height so the stars can be placed over the bg regardless of screen dimensions
+      position: absolute;
+      top: 110px;
+      z-index: 1;
+    }
+
+    .title {
+      font-size: xx-large;
+      position: absolute;
+      top: 140px;
+    }
+
+    .project-star {
+      position: absolute;
+      transform: scale(0.1);
+      z-index: 10;
+    }
+    .project-star:hover {
+      cursor: pointer;
+      transform: scale(0.13);
+    }
+
 }

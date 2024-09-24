@@ -11,6 +11,7 @@ import { GenericProjectShowcasePopupComponent } from '../../popups/generic-proje
 import { ComicImagesPreloaderService } from 'src/app/services/comic-images-preloader.service';
 
 const COOKIE_PROJECTS_PAGE_UNLOCKED = 'ab-ppu';
+const COOKIE_PROJECTS_CLICKED = 'ab-pc';
 
 @Component({
   selector: 'app-projects',
@@ -28,6 +29,8 @@ export class ProjectsComponent {
   private screenWidth!: number;
   private screenHeight!: number;
 
+  private clickedProjectsNames!: Set<string>;
+
   constructor(
     private cookieService: CookieService,
     private dialog: MatDialog,
@@ -40,6 +43,9 @@ export class ProjectsComponent {
     this.onResize();
 
     this.comicImagesPreloader.preloadComic();
+
+    const clickedProjects = this.cookieService.get(COOKIE_PROJECTS_CLICKED);
+    this.clickedProjectsNames = clickedProjects ? new Set<string>(JSON.parse(clickedProjects)) : new Set<string>();
   }
 
   @HostListener('window:resize', ['$event'])
@@ -63,8 +69,17 @@ export class ProjectsComponent {
     this.cookieService.put(COOKIE_PROJECTS_PAGE_UNLOCKED, '1');
   }
 
+  isClicked(projectName: string): boolean {
+    return this.clickedProjectsNames.has(projectName);
+  }
+
   openProject(name: string) {
     // Dev note: for YT video src link: view YT video -> Share -> embed -> extract src attribute in given embed code
+
+    if (!this.clickedProjectsNames.has(name)) {
+      this.clickedProjectsNames.add(name);
+      this.cookieService.put(COOKIE_PROJECTS_CLICKED, JSON.stringify([...this.clickedProjectsNames]));
+    }
 
     // TODO: probably want the project data (title, description, etc.) to come from a const
     switch (name) {

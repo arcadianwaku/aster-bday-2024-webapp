@@ -27,7 +27,6 @@ export class LettersComponent {
     this.onResize();
 
     const clickedMsgs = this.cookieService.get(COOKIE_CLICKED_MESSAGES_NAMES_LIST);
-    console.log(clickedMsgs);
     this.clickedMessagesNames = clickedMsgs ? new Set<string>(JSON.parse(clickedMsgs)) : new Set<string>();
   }
 

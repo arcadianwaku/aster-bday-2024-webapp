@@ -1,4 +1,4 @@
-<div class="container" *ngIf="isPageLocked">
+<div class="content" *ngIf="isPageLocked">
     <img src="/assets/projects-pwd-page/bg.png" class="prompt-bg"/>
     <div class="prompt-container">
         <span class="pwd-header">ENTER PASSWORD</span>
@@ -16,16 +16,45 @@
 <div id="stars3"></div>
 <div id="stars4"></div>
 
-<div class="bg">
-    <div class="container" *ngIf="!isPageLocked">
-        <!-- TODO: move these to clickable stars that lay on top of constellation background -->
-        <button mat-button (click)="openProject('Jess')">Jess project</button>
-        <button mat-button (click)="openProject('Syndrie')">Syndrie project</button>
-        <button mat-button (click)="openProject('Akira')">Akira project</button>
-        <button mat-button (click)="openProject('Milan')">Milan project</button>
-        <button mat-button (click)="openProject('Hoshee')">Hoshee project</button>
-        <button mat-button (click)="openProject('Rui')">Rui project</button>
-        <button mat-button (click)="openProject('Ascana')">Ascana project</button>
-        <button mat-button (click)="openProject('Lyn')">Lyn project</button>
-    </div>    
+<div class="content" *ngIf="!isPageLocked">
+
+    <span class="title">CENTER OF CELESTIAL KNOWLEDGE</span>
+
+    <img src="/assets/projects-page/Libra_Constellation_line.png" class="constellation-bg" />
+
+    <img [src]="isClicked('Jess') ? '/assets/fan-letters-page/glowing_star_purple.gif' : '/assets/fan-letters-page/glowing_star_yellow.gif'"
+        class="project-star" (click)="openProject('Jess')" style="top: 30px; left: calc(50vw - 680px)"
+    />
+
+    <img [src]="isClicked('Syndrie') ? '/assets/fan-letters-page/glowing_star_purple.gif' : '/assets/fan-letters-page/glowing_star_yellow.gif'"
+        class="project-star" (click)="openProject('Syndrie')" style="top: 55px; left: calc(50vw - 612px)"
+    />
+
+    <img [src]="isClicked('Akira') ? '/assets/fan-letters-page/glowing_star_purple.gif' : '/assets/fan-letters-page/glowing_star_yellow.gif'"
+        class="project-star" (click)="openProject('Akira')" style="top: 15px; left: calc(50vw - 562px)"
+    />
+
+    <img [src]="isClicked('Milan') ? '/assets/fan-letters-page/glowing_star_purple.gif' : '/assets/fan-letters-page/glowing_star_yellow.gif'"
+        class="project-star" (click)="openProject('Milan')" style="top: -206px; left: calc(50vw - 447px)"
+    />
+
+    <img [src]="isClicked('Hoshee') ? '/assets/fan-letters-page/glowing_star_purple.gif' : '/assets/fan-letters-page/glowing_star_yellow.gif'"
+        class="project-star" (click)="openProject('Hoshee')" style="top: -95px; left: calc(50vw - 507px)"
+    />
+
+    <img [src]="isClicked('Rui') ? '/assets/fan-letters-page/glowing_star_purple.gif' : '/assets/fan-letters-page/glowing_star_yellow.gif'"
+        class="project-star" (click)="openProject('Rui')" style="top: -136px; left: calc(50vw - 242px)"
+    />
+
+    <img [src]="isClicked('Lyn') ? '/assets/fan-letters-page/glowing_star_purple.gif' : '/assets/fan-letters-page/glowing_star_yellow.gif'"
+        class="project-star" (click)="openProject('Lyn')" style="top: -79px; left: calc(50vw - 307px)"
+    />
+
+    <img [src]="isClicked('Ascana') ? '/assets/fan-letters-page/glowing_star_purple.gif' : '/assets/fan-letters-page/glowing_star_yellow.gif'"
+        class="project-star" (click)="openProject('Ascana')" style="top: 60px; left: calc(50vw - 158px)"
+    />
+
+    <img [src]="isClicked('Empty') ? '/assets/fan-letters-page/glowing_star_purple.gif' : '/assets/fan-letters-page/glowing_star_yellow.gif'"
+        class="project-star" (click)="openProject('Empty')" style="top: 198px; left: calc(50vw - 368px)"
+    />
 </div>
