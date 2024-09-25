@@ -10,16 +10,20 @@
     </div>
 </div>
 
+
+<div class="content" *ngIf="!isPageLocked">
+
 <!--Stars-->
+<div class="stars" style="position: absolute; display: flex; height:90vh; width: 90vw;">
 <div id="stars1"></div>
 <div id="stars2"></div>
 <div id="stars3"></div>
 <div id="stars4"></div>
+</div>
 
-<div class="content" *ngIf="!isPageLocked">
-
-    <span class="title">CENTER OF CELESTIAL KNOWLEDGE</span>
-
+    <span class="title" style="color:white; text-shadow: 0 0 20px rgb(128,103,231); width:1000px;
+    z-index: 100; text-align: center;">CENTER OF CELESTIAL KNOWLEDGE</span>
+<div class="constellation">
     <img src="/assets/projects-page/Libra_Constellation_line.png" class="constellation-bg" />
 
     <img [src]="isClicked('Jess') ? '/assets/fan-letters-page/glowing_star_purple.gif' : '/assets/fan-letters-page/glowing_star_yellow.gif'"
@@ -44,7 +48,7 @@
 
     <!-- Empty for hoshee project after bday celebration -->
     <img [src]="isClicked('Hoshee') ? '/assets/fan-letters-page/glowing_star_purple.gif' : '/assets/fan-letters-page/glowing_star_yellow.gif'"
-        class="project-star" (click)="openProject('Empty')" style="top: -79px; left: calc(50vw - 307px); transform: scale(0.07);"
+        class="project-star" (click)="openProject('Empty')" style="top: -79px; left: calc(50vw - 307px); transform: scale(0.06);"
     />
 
     <img [src]="isClicked('Ascana') ? '/assets/fan-letters-page/glowing_star_purple.gif' : '/assets/fan-letters-page/glowing_star_yellow.gif'"
@@ -54,4 +58,6 @@
     <img [src]="isClicked('Lyn') ? '/assets/fan-letters-page/glowing_star_purple.gif' : '/assets/fan-letters-page/glowing_star_yellow.gif'"
         class="project-star" (click)="openProject('Lyn')" style="top: 198px; left: calc(50vw - 368px)"
     />
+  </div>
 </div>
+

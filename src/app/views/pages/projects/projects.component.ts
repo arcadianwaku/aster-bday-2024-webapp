@@ -123,7 +123,7 @@ export class ProjectsComponent {
           autoFocus:false,
         });
         break;
-    
+
       case 'Milan':
         this.dialog.open(VideoProjectShowcasePopupComponent, {
           data: {
@@ -179,7 +179,7 @@ export class ProjectsComponent {
             isSmScreen: this.screenWidth <= 1200 / .75,
             useWhiteCloseBtn: true,
             useExternalLinkOverlay: true,
-            externalLink: 'https://www.youtube.com/watch?v=hAqxvClDTfc&ab_channel=AsterArcadia%E3%80%90NIJISANJIEN%E3%80%91',
+            externalLink: 'https://x.com/ascanatto/status/1838957064116437175?s=46',
           },
           minWidth: this.screenWidth <= 1200 / .75 ? '700px' : '1200px',
           autoFocus:false,

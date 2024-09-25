@@ -105,8 +105,8 @@ section {
 }
 
 .member-container img {
-  height:100px;
-  width:100px;
+  width: 9rem;
+  aspect-ratio: 1 / 1;
   border-radius: 50%;
   background-color: white;
   display:flex;
@@ -135,9 +135,9 @@ button {
 }
 }
 
-.members {
+.members, .stellarartists {
   display: flex;
-  gap:10%;
+  gap:8.5%;
   font-size:1.5rem !important;
   text-align: center;
   justify-content: center;
@@ -149,6 +149,29 @@ button {
   .members {
     flex-wrap: wrap;
   }
+}
+
+@media screen and (max-width: 768px) {
+  .members {
+    flex-wrap: wrap;
+  }
+}
+
+@media screen and (max-width: 910px) {
+  .stellarartists {
+    flex-wrap: wrap;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+
+ .member-container img {
+  width:5rem;
+ }
+
+ .members {
+  gap:5%;
+ }
 }
 
 
