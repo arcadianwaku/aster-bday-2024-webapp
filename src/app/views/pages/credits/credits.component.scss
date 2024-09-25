@@ -142,7 +142,12 @@ button {
   justify-content: center;
   width:75vw;
   padding-block: 10px;
-  flex-wrap: wrap;
+}
+
+@media screen and (max-width: 768px) {
+  .members {
+    flex-wrap: wrap;
+  }
 }
 
 
