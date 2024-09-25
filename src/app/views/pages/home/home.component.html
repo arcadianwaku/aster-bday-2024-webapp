@@ -14,16 +14,14 @@
 <div class="main-content">
     <div class="page-thumbnail-wrapper">
         <div class="page-thumbnail-container">
-            <div *ngFor="let thumbnailDetails of pageThumbnailDetails"
-                class="page-thumbnail"
-                [ngStyle]="{'background-image': 'url(' + thumbnailDetails.thumbnailUrl + ')'}"
-                (click)="navigateToPage(thumbnailDetails.navigateToPath)"
-            >
-                <span class="spacer"></span>
-                <div class="title-wrapper">
-                    <span class="title">{{ thumbnailDetails.title }}</span>
+            <a *ngFor="let thumbnailDetails of pageThumbnailDetails" [href]="thumbnailDetails.navigateToPath" class="page-thumbnail-link">
+                <div class="page-thumbnail" [ngStyle]="{'background-image': 'url(' + thumbnailDetails.thumbnailUrl + ')'}">
+                    <span class="spacer"></span>
+                    <div class="title-wrapper">
+                        <span class="title">{{ thumbnailDetails.title }}</span>
+                    </div>
                 </div>
-            </div>
+            </a>
         </div>
     </div>
 </div>
