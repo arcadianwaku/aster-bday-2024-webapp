@@ -103,7 +103,7 @@ export class ProjectsComponent {
           data: {
             title: 'Celestial Showcase: Aster Arcadia',
             description: "A look into Aster Arcadia's streams and the reasons why his fans continue to keep coming back for more.",
-            videoLink: 'https://www.youtube.com/embed/hAqxvClDTfc?si=WnXfPIblnnK7hv7J',
+            videoLink: 'https://www.youtube.com/embed/V_VRgPLws9A?si=d31x1FXfdtgZutMl',
             backgroundColor: 'rgb(147, 113, 221)',
           },
           minWidth: this.screenWidth <= 1200 / .75 ? '700px' : '1200px',
@@ -114,9 +114,9 @@ export class ProjectsComponent {
       case 'Akira':
         this.dialog.open(VideoProjectShowcasePopupComponent, {
           data: {
-            title: 'Project Title (Video Type)',
-            description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
-            videoLink: 'https://www.youtube.com/embed/hAqxvClDTfc?si=WnXfPIblnnK7hv7J',
+            title: 'Aster pape journeys',
+            description: "A birthday project documenting aster pape journeys around the world.",
+            videoLink: 'https://www.youtube.com/embed/nfTtovwi7i4?si=In96UBjWXnhacgjK',
             backgroundColor: 'rgb(105, 93, 207)',
           },
           minWidth: this.screenWidth <= 1200 / .75 ? '700px' : '1200px',
@@ -127,9 +127,9 @@ export class ProjectsComponent {
       case 'Milan':
         this.dialog.open(VideoProjectShowcasePopupComponent, {
           data: {
-            title: 'Project Title (Video Type)',
-            description: "Lorem Ipsum is simply dummy text of the printing and t a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
-            videoLink: 'https://www.youtube.com/embed/hAqxvClDTfc?si=WnXfPIblnnK7hv7J',
+            title: '𝙇𝙊𝘾𝙆𝙀𝘿 𝙄𝙉 .ᐟ',
+            description: "Ever wondered what it’s like in a gamer’s point of view?",
+            videoLink: 'https://www.youtube.com/embed/ZUuyTXmGwLk?si=MnsCRIED7Yg-BNQt',
             backgroundColor: 'rgb(92, 61, 111)',
             useWhiteCloseBtn: true,
           },
