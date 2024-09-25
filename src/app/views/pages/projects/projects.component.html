@@ -46,15 +46,16 @@
         class="project-star" (click)="openProject('Rui')" style="top: -136px; left: calc(50vw - 242px)"
     />
 
-    <img [src]="isClicked('Lyn') ? '/assets/fan-letters-page/glowing_star_purple.gif' : '/assets/fan-letters-page/glowing_star_yellow.gif'"
-        class="project-star" (click)="openProject('Lyn')" style="top: -79px; left: calc(50vw - 307px)"
+    <!-- Empty for hoshee project after bday celebration -->
+    <img [src]="isClicked('Empty') ? '/assets/fan-letters-page/glowing_star_purple.gif' : '/assets/fan-letters-page/glowing_star_yellow.gif'"
+        class="project-star" (click)="openProject('Empty')" style="top: -79px; left: calc(50vw - 307px); transform: scale(0.07);"
     />
 
     <img [src]="isClicked('Ascana') ? '/assets/fan-letters-page/glowing_star_purple.gif' : '/assets/fan-letters-page/glowing_star_yellow.gif'"
         class="project-star" (click)="openProject('Ascana')" style="top: 60px; left: calc(50vw - 158px)"
     />
 
-    <img [src]="isClicked('Empty') ? '/assets/fan-letters-page/glowing_star_purple.gif' : '/assets/fan-letters-page/glowing_star_yellow.gif'"
-        class="project-star" (click)="openProject('Empty')" style="top: 198px; left: calc(50vw - 368px)"
+    <img [src]="isClicked('Lyn') ? '/assets/fan-letters-page/glowing_star_purple.gif' : '/assets/fan-letters-page/glowing_star_yellow.gif'"
+        class="project-star" (click)="openProject('Lyn')" style="top: 198px; left: calc(50vw - 368px)"
     />
 </div>
