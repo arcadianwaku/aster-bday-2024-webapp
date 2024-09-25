@@ -1,4 +1,4 @@
-.bg-video {
+.bg-video.dynamic-1{
   object-fit: cover;
   position: fixed;
   right: 0;
@@ -9,7 +9,7 @@
   background-color: rgb(55, 47, 108);
 }
 
-@media (max-width:1900px) { // to maintain smaller bg for small screens
+@media (max-width: 1400px) { // to maintain smaller bg for small screens
   .bg-video.dynamic-1 {
     max-height: 110%;
   }
